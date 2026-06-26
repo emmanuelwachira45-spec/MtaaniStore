@@ -7,9 +7,21 @@
 
     {% load static %}
 
+     <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+     <script src="{% static 'Bootstrap/js/bootstrap.min.js' %}"></script>
+
+
 </head>
 <body>
     <h1>Welcome to Mtaani Store</h1>
+
+    <a href="{% url 'gallery' %}">Gallery</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'contact' %}">Contact</a>
+
+
+
+
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium officiis dignissimos explicabo alias voluptatum tempora rem corrupti eligendi molestiae ratione maiores iste doloribus vel saepe, provident nihil delectus sequi placeat.
     Sequi, expedita! Quis, corporis ea ipsum tenetur nam beatae hic quo. Temporibus sint facere nostrum tempore ea amet, fugit sunt pariatur, quisquam qui a perferendis nam assumenda beatae, libero impedit!
     Nulla quo tempora consequatur est beatae, doloremque reiciendis, quisquam odit corporis veniam, laboriosam ullam pariatur voluptatibus animi? Deserunt, maiores molestias temporibus tempore amet maxime, quaerat in deleniti quasi, culpa nemo!</p>
