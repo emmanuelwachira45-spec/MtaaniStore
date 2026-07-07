@@ -3,82 +3,465 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lists</title>
+    <title>Computer Components | Mtaani Store</title>
 
     {% load static %}
 
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'Bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+<style>
+
+body {
+    background:#f8fafc;
+    font-family:"Segoe UI", sans-serif;
+    color:#1e293b;
+}
+
+
+/* Header */
+
+.hero {
+
+    background:linear-gradient(
+        135deg,
+        #020617,
+        #2563eb
+    );
+
+    padding:70px 20px;
+    color:white;
+    text-align:center;
+
+}
+
+
+.hero h1 {
+
+    font-size:3.5rem;
+    font-weight:900;
+
+}
+
+
+.hero p {
+
+    max-width:750px;
+    margin:auto;
+    font-size:1.1rem;
+    line-height:1.8;
+
+}
+
+
+
+/* Component Cards */
+
+
+.container-box {
+
+    padding:70px 10%;
+
+}
+
+
+.component-card {
+
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    margin-bottom:30px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.component-card:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.component-card h2 {
+
+    color:#2563eb;
+    font-weight:800;
+
+}
+
+
+.component-card h3 {
+
+    font-size:1.2rem;
+    margin-top:20px;
+
+}
+
+
+
+ul, ol {
+
+    line-height:2;
+    color:#475569;
+
+}
+
+
+.badge-tech {
+
+    background:#2563eb;
+    color:white;
+    padding:8px 18px;
+    border-radius:50px;
+    font-size:.9rem;
+
+}
+
+
+
+footer {
+
+    background:#020617;
+    color:white;
+    text-align:center;
+    padding:30px;
+
+}
+
+
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:2.5rem;
+
+}
+
+}
+
+
+</style>
+
+
 </head>
+
+
 <body>
-    <h1 class="text-center text-dark">Computer Components</h1>
-    <p>Here are the main components of a computer:</p>
-
-    <h2>Computer primary Components</h2>
-    <ol>
-        <!-- 1. Input device -->
-        <li>
-            Input device
-            <ol type="a">
-                <!-- a. Direct Input -->
-                <li>Direct Input
-                    <ul>
-                        <li>Scanner</li>
-                    </ul>
-                </li>
-                <!-- b. Indirect Input -->  
-                <li>Indirect Input
-                    <ul>
-                        <li>Keyboard</li>
-                        <li>Mouse</li>
-                    </ul>
-                </li>
-            </ol>
-        </li>
 
 
-        <!-- 2. Output device -->
-        <li>
-            Output device
-            <ol type="a">
-                <!-- a. Monitor -->
-                <li>Monitor
-                    <ul>
-                        <li>CRT Monitor</li>
-                        <li>LCD Monitor</li>
-                    </ul>
-                </li>
-                <li>Speaker</li>
-            </ol>
-        </li>
 
-        <!-- 3. Processing Device -->
-        <li>Processing Device
-            <ol type="a">
-                <!-- a. ALU -->
-                <li>ALU
-                    <ul>
-                        <li>Arithmetic Unit</li>
-                        <li>Logic Unit</li>
-                    </ul>
-                </li>
-                <!-- b. CU -->
-                <li>CU</li>
-            </ol>
-        </li>
+<!-- Hero -->
 
-            <! -- 4. Storage Device -->
-            <li>Storage Device
-            <ol type="a">
-                <!-- a. Primary Storage -->
-                <li>Primary Storage
-                    <ul>
-                        <li>RAM
-                            <ol type="i">
-                                <li>DRAM</li>
-                                <li>SRAM</li>
-                            </ol>
-                        </li>
-                    </ul>
-                </li>
-                
+<section class="hero">
+
+
+<h1>
+Computer Components
+</h1>
+
+
+<p>
+Explore the essential parts of a computer system,
+from input devices to storage components and processing units.
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="container-box">
+
+
+
+<!-- Input -->
+
+<div class="component-card">
+
+
+<span class="badge-tech">
+01 Input Devices
+</span>
+
+
+<h2>
+Input Device
+</h2>
+
+
+<p>
+Devices used to enter data and instructions into a computer.
+</p>
+
+
+<ol type="a">
+
+<li>
+<b>Direct Input</b>
+
+<ul>
+
+<li>Scanner</li>
+
+</ul>
+
+</li>
+
+
+
+<li>
+<b>Indirect Input</b>
+
+<ul>
+
+<li>Keyboard</li>
+
+<li>Mouse</li>
+
+</ul>
+
+</li>
+
+
+</ol>
+
+
+</div>
+
+
+
+
+
+
+<!-- Output -->
+
+<div class="component-card">
+
+
+<span class="badge-tech">
+02 Output Devices
+</span>
+
+
+<h2>
+Output Device
+</h2>
+
+
+<p>
+Hardware components that display or produce processed information.
+</p>
+
+
+<ol type="a">
+
+
+<li>
+<b>Monitor</b>
+
+<ul>
+
+<li>CRT Monitor</li>
+
+<li>LCD Monitor</li>
+
+</ul>
+
+</li>
+
+
+
+<li>
+<b>Speaker</b>
+
+</li>
+
+
+</ol>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Processing -->
+
+<div class="component-card">
+
+
+<span class="badge-tech">
+03 Processing Unit
+</span>
+
+
+<h2>
+Processing Device
+</h2>
+
+
+<p>
+The brain of the computer responsible for executing instructions.
+</p>
+
+
+<ol type="a">
+
+
+<li>
+<b>ALU (Arithmetic Logic Unit)</b>
+
+<ul>
+
+<li>
+Arithmetic Unit
+</li>
+
+
+<li>
+Logic Unit
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+
+<li>
+<b>CU (Control Unit)</b>
+
+</li>
+
+
+</ol>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Storage -->
+
+<div class="component-card">
+
+
+<span class="badge-tech">
+04 Storage Devices
+</span>
+
+
+<h2>
+Storage Device
+</h2>
+
+
+<p>
+Components used to save and retrieve computer data.
+</p>
+
+
+
+<ol type="a">
+
+
+<li>
+<b>Primary Storage</b>
+
+
+<ul>
+
+
+<li>
+
+RAM
+
+<ol type="i">
+
+<li>
+DRAM
+</li>
+
+<li>
+SRAM
+</li>
+
+
+</ol>
+
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+
+<li>
+<b>Secondary Storage</b>
+
+<ul>
+
+<li>Hard Disk Drive (HDD)</li>
+
+<li>Solid State Drive (SSD)</li>
+
+<li>Flash Storage</li>
+
+</ul>
+
+</li>
+
+
+</ol>
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<p class="mb-0">
+© 2026 Mtaani Store | Computer Technology Hub
+</p>
+
+</footer>
+
+
+
 </body>
 </html>

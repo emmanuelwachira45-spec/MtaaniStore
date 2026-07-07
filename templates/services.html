@@ -3,24 +3,500 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services page</title>
+    <title>Services | Mtaani Store</title>
 
     {% load static %}
 
     <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
-    <script src="{% static 'Bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+<style>
+
+body {
+    background:#f8fafc;
+    font-family:"Segoe UI", sans-serif;
+    color:#1e293b;
+}
+
+
+
+/* Hero Section */
+
+.hero {
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #2563eb
+    );
+
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+
+}
+
+
+.hero h1 {
+
+    font-size:3.5rem;
+    font-weight:900;
+
+}
+
+
+.hero p {
+
+    max-width:800px;
+    margin:20px auto;
+    line-height:1.8;
+    font-size:1.1rem;
+    opacity:.9;
+
+}
+
+
+
+
+/* Services */
+
+.services {
+
+    padding:70px 10%;
+
+}
+
+
+
+.service-card {
+
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    height:100%;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+
+
+.service-card:hover {
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.service-card img {
+
+    width:100%;
+    height:250px;
+    object-fit:cover;
+
+}
+
+
+
+.service-content {
+
+    padding:30px;
+    text-align:center;
+
+}
+
+
+
+.service-content h3 {
+
+    color:#2563eb;
+    font-weight:800;
+
+}
+
+
+
+.service-content p {
+
+    color:#64748b;
+    line-height:1.7;
+
+}
+
+
+
+/* Features */
+
+.features {
+
+    background:white;
+    padding:60px 10%;
+
+}
+
+
+
+.feature-box {
+
+    text-align:center;
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+
+}
+
+
+
+.feature-box:hover {
+
+    background:#f1f5f9;
+    transform:translateY(-8px);
+
+}
+
+
+
+.icon {
+
+    font-size:45px;
+    margin-bottom:15px;
+
+}
+
+
+
+
+footer {
+
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+
+}
+
+
+
+@media(max-width:768px){
+
+.hero h1 {
+
+font-size:2.5rem;
+
+}
+
+}
+
+
+</style>
+
 
 </head>
+
+
 <body>
 
-    <h1 class="text-center text-dark">Services offered at Mtaani Store</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium officiis dignissimos explicabo alias voluptatum tempora rem corrupti eligendi molestiae ratione maiores iste doloribus vel saepe, provident nihil delectus sequi placeat.
-    Sequi, expedita! Quis, corporis ea ipsum tenetur nam beatae hic quo. Temporibus sint facere nostrum tempore ea amet, fugit sunt pariatur, quisquam qui a perferendis nam assumenda beatae, libero impedit!
-    Nulla quo tempora consequatur est beatae, doloremque reiciendis, quisquam odit corporis veniam, laboriosam ullam pariatur voluptatibus animi? Deserunt, maiores molestias temporibus tempore amet maxime, quaerat in deleniti quasi, culpa nemo!</p>
 
-    <img src="{% static 'images/image copy 5.png' %}" alt="">
-    <img src="{% static 'images/image copy 4.png' %}" alt="">
-    <img src="{% static 'images/image copy 7.png' %}" alt="">
+
+
+<!-- Hero -->
+
+<section class="hero">
+
+
+<h1>
+Services Offered At Mtaani Store
+</h1>
+
+
+<p>
+We provide reliable shopping solutions, quality products,
+and customer-focused services designed to make your online
+shopping experience simple and enjoyable.
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Services Cards -->
+
+
+<section class="services">
+
+
+<div class="container">
+
+
+<div class="row g-4">
+
+
+
+<div class="col-lg-4 col-md-6">
+
+
+<div class="service-card">
+
+
+<img src="{% static 'images/image copy 5.png' %}" 
+alt="Product Service">
+
+
+
+<div class="service-content">
+
+
+<h3>
+Product Sales
+</h3>
+
+
+<p>
+Discover a wide range of affordable and quality products
+carefully selected for our customers.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-lg-4 col-md-6">
+
+
+<div class="service-card">
+
+
+<img src="{% static 'images/image copy 4.png' %}" 
+alt="Delivery Service">
+
+
+
+<div class="service-content">
+
+
+<h3>
+Fast Delivery
+</h3>
+
+
+<p>
+Enjoy quick and reliable delivery services that bring
+your purchases directly to you.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-lg-4 col-md-6">
+
+
+<div class="service-card">
+
+
+<img src="{% static 'images/image copy 7.png' %}" 
+alt="Customer Support">
+
+
+
+<div class="service-content">
+
+
+<h3>
+Customer Support
+</h3>
+
+
+<p>
+Our team is always ready to assist you with questions,
+orders, and product information.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Extra Features -->
+
+
+<section class="features">
+
+
+<div class="container">
+
+
+<div class="row">
+
+
+
+<div class="col-md-4">
+
+
+<div class="feature-box">
+
+
+<div class="icon">
+🚚
+</div>
+
+
+<h4>
+Reliable Delivery
+</h4>
+
+
+<p>
+Safe and efficient product transportation.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="feature-box">
+
+
+<div class="icon">
+🔒
+</div>
+
+
+<h4>
+Secure Shopping
+</h4>
+
+
+<p>
+Safe transactions and trusted services.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="feature-box">
+
+
+<div class="icon">
+⭐
+</div>
+
+
+<h4>
+Quality Guarantee
+</h4>
+
+
+<p>
+Products selected with customer satisfaction in mind.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+<p class="mb-0">
+© 2026 Mtaani Store | Premium Shopping Experience
+</p>
+
+</footer>
+
 
 
 </body>

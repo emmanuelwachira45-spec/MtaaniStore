@@ -3,14 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>About Us</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium officiis dignissimos explicabo alias voluptatum tempora rem corrupti eligendi molestiae ratione maiores iste doloribus vel saepe, provident nihil delectus sequi placeat.
-    Sequi, expedita! Quis, corporis ea ipsum tenetur nam beatae hic quo. Temporibus sint facere nostrum tempore ea amet, fugit sunt pariatur, quisquam qui a perferendis nam assumenda beatae, libero impedit!
-    Nulla quo tempora consequatur est beatae, doloremque reiciendis, quisquam odit corporis veniam, laboriosam ullam pariatur voluptatibus animi? Deserunt, maiores molestias temporibus tempore amet maxime, quaerat in deleniti quasi, culpa nemo!</p>
+    <title>About Us | Genesis Store</title>
 
-    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 10%;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            animation: fadeUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: .9;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 35px;
+            background: white;
+            color: #2563eb;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,.2);
+        }
+
+
+        /* About Section */
+
+        .container {
+            padding: 80px 10%;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 50px;
+            align-items:center;
+        }
+
+        .image-box {
+            height:350px;
+            border-radius:25px;
+            background:
+            linear-gradient(
+            rgba(0,0,0,.3),
+            rgba(0,0,0,.3)),
+            url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d")
+            center/cover;
+
+            box-shadow:0 20px 40px rgba(0,0,0,.15);
+        }
+
+
+        .text h2 {
+            font-size:2.5rem;
+            margin-bottom:20px;
+        }
+
+        .text p {
+            line-height:1.8;
+            color:#475569;
+        }
+
+
+        /* Features */
+
+        .features {
+            display:grid;
+            grid-template-columns:
+            repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+            margin-top:60px;
+        }
+
+
+        .card {
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            transition:.3s;
+            box-shadow:
+            0 10px 30px rgba(0,0,0,.08);
+        }
+
+
+        .card:hover {
+            transform:translateY(-10px);
+        }
+
+
+        .icon {
+            font-size:40px;
+            margin-bottom:20px;
+        }
+
+
+        .card h3 {
+            margin-bottom:15px;
+            font-size:1.3rem;
+        }
+
+
+        .card p {
+            color:#64748b;
+            line-height:1.6;
+        }
+
+
+        /* Stats */
+
+        .stats {
+            margin-top:80px;
+            background:#0f172a;
+            color:white;
+            border-radius:30px;
+            padding:50px;
+            display:grid;
+            grid-template-columns:
+            repeat(auto-fit,minmax(200px,1fr));
+            text-align:center;
+            gap:30px;
+        }
+
+
+        .stats h2 {
+            font-size:3rem;
+            color:#60a5fa;
+        }
+
+
+        .stats p {
+            margin-top:10px;
+            color:#cbd5e1;
+        }
+
+
+        /* Animation */
+
+        @keyframes fadeUp {
+            from {
+                opacity:0;
+                transform:translateY(30px);
+            }
+
+            to {
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+
+        @media(max-width:700px){
+
+            .hero h1 {
+                font-size:2.5rem;
+            }
+
+            .hero p {
+                font-size:1rem;
+            }
+
+            .text h2 {
+                font-size:2rem;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Building The Future Of Online Shopping</h1>
+
+        <p>
+            Welcome to Genesis Store — a modern ecommerce platform
+            designed to bring quality products, seamless shopping,
+            and exceptional customer experiences together.
+        </p>
+
+        <a href="#" class="btn">
+            Explore Products
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+
+<div class="about">
+
+
+<div class="image-box"></div>
+
+
+<div class="text">
+
+<h2>
+Who We Are
+</h2>
+
+
+<p>
+Genesis Store is more than just an online shop.
+We connect customers with carefully selected products
+through a fast, secure and enjoyable shopping experience.
+Our mission is to make online shopping simple,
+reliable and accessible for everyone.
+</p>
+
+
+<p>
+From product discovery to checkout, every part of our
+platform is designed with customers in mind.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="features">
+
+
+<div class="card">
+
+<div class="icon">🚀</div>
+
+<h3>Fast Delivery</h3>
+
+<p>
+Quick and reliable shipping that gets your products
+to you safely.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">🔒</div>
+
+<h3>Secure Shopping</h3>
+
+<p>
+Protected payments and a trusted shopping environment.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">⭐</div>
+
+<h3>Premium Quality</h3>
+
+<p>
+We focus on products that deliver value and satisfaction.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="stats">
+
+
+<div>
+<h2>10K+</h2>
+<p>Happy Customers</p>
+</div>
+
+
+<div>
+<h2>500+</h2>
+<p>Products</p>
+</div>
+
+
+<div>
+<h2>99%</h2>
+<p>Customer Satisfaction</p>
+</div>
+
+
+<div>
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
 </body>
 </html>

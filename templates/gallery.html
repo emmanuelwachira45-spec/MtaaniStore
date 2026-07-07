@@ -3,35 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>Gallery | Genesis Store</title>
 
     {% load static %}
 
-     <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
-     <script src="{% static 'Bootstrap/js/bootstrap.min.js' %}"></script>
-
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'Bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
 
     <style>
-        h1{
-            text-align: center;
+
+        body {
+            background: #f8fafc;
+            font-family: "Segoe UI", sans-serif;
+            color: #1e293b;
         }
+
+
+        /* Hero Section */
+
+        .hero {
+
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #2563eb
+            );
+
+            padding: 80px 20px;
+            text-align:center;
+            color:white;
+
+        }
+
+
+        .hero h1 {
+
+            font-size:3.5rem;
+            font-weight:800;
+
+        }
+
+
+        .hero p {
+
+            max-width:800px;
+            margin:20px auto;
+            font-size:1.1rem;
+            opacity:.9;
+            line-height:1.8;
+
+        }
+
+
+
+
+        /* Gallery */
+
+        .gallery-container {
+
+            padding:70px 0;
+
+        }
+
+
+
+        .gallery-card {
+
+            position:relative;
+            overflow:hidden;
+            border-radius:25px;
+            height:300px;
+            box-shadow:
+            0 15px 35px rgba(0,0,0,.12);
+            transition:.4s;
+
+        }
+
+
+
+        .gallery-card img {
+
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:.5s;
+
+        }
+
+
+
+        .gallery-card:hover img {
+
+            transform:scale(1.15);
+
+        }
+
+
+
+        .gallery-card:hover {
+
+            transform:translateY(-10px);
+
+        }
+
+
+
+        /* Overlay */
+
+        .overlay {
+
+            position:absolute;
+            inset:0;
+            background:
+            linear-gradient(
+            transparent,
+            rgba(0,0,0,.7)
+            );
+
+            display:flex;
+            align-items:end;
+            padding:25px;
+            color:white;
+            opacity:0;
+            transition:.4s;
+
+        }
+
+
+
+        .gallery-card:hover .overlay {
+
+            opacity:1;
+
+        }
+
+
+
+
+        .overlay h3 {
+
+            font-size:1.4rem;
+            font-weight:700;
+
+        }
+
+
+
+        /* Button */
+
+        .btn-shop {
+
+            background:white;
+            color:#2563eb;
+            padding:12px 35px;
+            border-radius:50px;
+            text-decoration:none;
+            font-weight:700;
+            display:inline-block;
+            margin-top:20px;
+            transition:.3s;
+
+        }
+
+
+        .btn-shop:hover {
+
+            transform:translateY(-5px);
+            box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+        }
+
+
+
+
+        footer {
+
+            background:#0f172a;
+            color:white;
+            padding:30px;
+            text-align:center;
+
+        }
+
+
+
+        @media(max-width:768px){
+
+            .hero h1 {
+
+                font-size:2.5rem;
+
+            }
+
+
+            .gallery-card {
+
+                height:250px;
+
+            }
+
+        }
+
+
     </style>
 
 
 </head>
+
+
 <body>
 
-    <h1>Gallery Page</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero odio quia soluta minima eum natus illo, mollitia dolorem magni pariatur unde quibusdam dolorum eius ullam earum assumenda. Soluta, corporis harum?
-    Commodi excepturi nobis quae, quidem sint unde delectus nisi eaque accusamus voluptatibus illum, optio, ut adipisci beatae eligendi sequi iure veritatis doloremque. Delectus accusamus earum alias nam numquam dignissimos exercitationem?</p>
 
-    <img src="{% static 'images/image.png' %}" alt="">
-    <img src="{% static 'images/image copy 2.png' %}" alt="">
-    <img src="{% static 'images/image copy 3.png' %}" alt="">
-    <img src="{% static 'images/image copy 4.png' %}" alt="">
-    
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+
+<h1>
+Our Product Gallery
+</h1>
+
+
+<p>
+Explore our collection of premium products.
+Every item is carefully selected to provide quality,
+style, and the best shopping experience.
+</p>
+
+
+<a href="#" class="btn-shop">
+Shop Now
+</a>
+
+
+</section>
+
+
+
+
+
+<!-- Gallery Section -->
+
+
+<section class="container gallery-container">
+
+
+<div class="row g-4">
+
+
+
+<div class="col-lg-3 col-md-6">
+
+
+<div class="gallery-card">
+
+
+<img src="{% static 'images/image.png' %}" alt="Product Image">
+
+
+<div class="overlay">
+
+<h3>
+Premium Collection
+</h3>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-lg-3 col-md-6">
+
+
+<div class="gallery-card">
+
+
+<img src="{% static 'images/image copy 2.png' %}" alt="Product Image">
+
+
+<div class="overlay">
+
+<h3>
+Modern Products
+</h3>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-lg-3 col-md-6">
+
+
+<div class="gallery-card">
+
+
+<img src="{% static 'images/image copy 3.png' %}" alt="Product Image">
+
+
+<div class="overlay">
+
+<h3>
+Quality Designs
+</h3>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-lg-3 col-md-6">
+
+
+<div class="gallery-card">
+
+
+<img src="{% static 'images/image copy 4.png' %}" alt="Product Image">
+
+
+<div class="overlay">
+
+<h3>
+Latest Arrivals
+</h3>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<p class="mb-0">
+© 2026 Genesis Store | Premium Online Shopping
+</p>
+
+</footer>
 
 
 

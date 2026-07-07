@@ -3,24 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us | Genesis Store</title>
 
     {% load static %}
 
-     <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
-     <script src="{% static 'Bootstrap/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'Bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
+    <style>
+
+        body {
+            background: #f8fafc;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+
+        /* Hero */
+
+        .hero {
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #2563eb
+            );
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 1.1rem;
+            opacity: .9;
+        }
+
+
+
+        /* Contact Cards */
+
+        .contact-card {
+
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            transition: .3s;
+            box-shadow:
+            0 10px 25px rgba(0,0,0,.08);
+
+        }
+
+
+        .contact-card:hover {
+
+            transform: translateY(-10px);
+
+        }
+
+
+
+        .icon {
+
+            font-size: 40px;
+            margin-bottom: 15px;
+
+        }
+
+
+
+        /* Form */
+
+        .form-control {
+
+            border-radius: 12px;
+            padding: 14px;
+
+        }
+
+
+        .btn-custom {
+
+            background:#2563eb;
+            color:white;
+            border-radius:50px;
+            padding:12px 35px;
+            border:none;
+            transition:.3s;
+
+        }
+
+
+        .btn-custom:hover {
+
+            background:#1d4ed8;
+            transform:translateY(-3px);
+
+        }
+
+
+
+        /* Images */
+
+        .gallery img {
+
+            width:100%;
+            height:220px;
+            object-fit:cover;
+            border-radius:20px;
+            transition:.3s;
+
+        }
+
+
+        .gallery img:hover {
+
+            transform:scale(1.05);
+
+        }
+
+
+
+        footer {
+
+            background:#0f172a;
+            color:white;
+            padding:30px;
+            text-align:center;
+
+        }
+
+
+
+        @media(max-width:768px){
+
+            .hero h1{
+
+                font-size:2.5rem;
+
+            }
+
+        }
+
+
+    </style>
 
 </head>
-<body>
-    <h1 class="text-center text-dark">Contact Us</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur voluptatibus animi quidem impedit illo accusamus ut expedita, nostrum iste, id minima quisquam incidunt aperiam. Autem quasi accusamus ipsam dignissimos enim.
-    Aliquid beatae error quisquam minima ex iste dolore quibusdam excepturi modi quis dolores delectus ratione, possimus deleniti temporibus libero illo cumque expedita reprehenderit dolorum. Voluptate sapiente numquam minima suscipit repellat?</p>
 
-    <img src="{% static 'images/image copy 7.png' %}" alt="Contact Image">
-    <img src="{% static 'images/image copy 6.png' %}" alt="Contact Image">
-    <img src="{% static 'images/image copy 2.png' %}" alt="Contact Image">
-    <img src="{% static 'images/image copy 3.png' %}" alt="Contact Image">
+
+<body>
+
+
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <h1>
+        Contact Genesis Store
+    </h1>
+
+
+    <p>
+        Have questions, need support, or want to know more about our products?
+        Our team is ready to help you anytime.
+    </p>
+
+</section>
+
+
+
+
+<!-- Contact Information -->
+
+<div class="container py-5">
+
+
+<div class="row g-4">
+
+
+
+<div class="col-md-4">
+
+<div class="contact-card text-center">
+
+<div class="icon">
+📍
+</div>
+
+<h4>
+Our Location
+</h4>
+
+<p>
+Nairobi, Kenya
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-4">
+
+<div class="contact-card text-center">
+
+<div class="icon">
+📞
+</div>
+
+<h4>
+Call Us
+</h4>
+
+<p>
++254 700 000 000
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="col-md-4">
+
+<div class="contact-card text-center">
+
+<div class="icon">
+✉️
+</div>
+
+<h4>
+Email
+</h4>
+
+<p>
+support@genesisstore.com
+</p>
+
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<!-- Contact Form -->
+
+
+<div class="row mt-5 align-items-center">
+
+
+<div class="col-lg-6">
+
+
+<h2 class="fw-bold mb-4">
+Send Us A Message
+</h2>
+
+
+<form>
+
+
+<div class="mb-3">
+
+<input 
+type="text"
+class="form-control"
+placeholder="Your Name">
+
+</div>
+
+
+
+<div class="mb-3">
+
+<input 
+type="email"
+class="form-control"
+placeholder="Your Email">
+
+</div>
+
+
+
+<div class="mb-3">
+
+<input 
+type="text"
+class="form-control"
+placeholder="Subject">
+
+</div>
+
+
+
+
+<div class="mb-3">
+
+<textarea 
+class="form-control"
+rows="5"
+placeholder="Your Message">
+</textarea>
+
+</div>
+
+
+
+
+<button class="btn-custom">
+
+Send Message
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+<!-- Image Section -->
+
+
+<div class="col-lg-6 mt-5 mt-lg-0">
+
+
+<div class="row g-3 gallery">
+
+
+<div class="col-6">
+
+<img src="{% static 'images/image copy 7.png' %}" 
+alt="Contact Image">
+
+</div>
+
+
+
+<div class="col-6">
+
+<img src="{% static 'images/image copy 6.png' %}" 
+alt="Contact Image">
+
+</div>
+
+
+
+<div class="col-6">
+
+<img src="{% static 'images/image copy 2.png' %}" 
+alt="Contact Image">
+
+</div>
+
+
+
+<div class="col-6">
+
+<img src="{% static 'images/image copy 3.png' %}" 
+alt="Contact Image">
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<footer>
+
+<p class="mb-0">
+© 2026 Genesis Store. All Rights Reserved.
+</p>
+
+</footer>
+
 
 
 </body>
